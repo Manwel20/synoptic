@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="form-container">
+        <div class="logo-container">
+            <img src="ewb-logo.png" alt="Logo" class="logo">
+        </div>
+        <h2>SMS Weather Update Listing</h2>
+        <form id="contactForm" action="/submit" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Soth Narong"required>
+            <p id="nameError" class="error-message"></p>
+            
+            <label for="number">Phone Number:</label>
+            <input type="tel" id="number" name="number" placeholder="e.g. 0123456789" required>
+            <p id="numberError" class="error-message"></p>
+            
+            <button type="submit">Submit</button>
+        </form>
+        <div id="confirmationMessage" class="confirmation-message">Thank you! Your form has been submitted.</div>
+    </div>
+</body>
+</html>
