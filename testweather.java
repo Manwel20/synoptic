@@ -25,7 +25,7 @@ public class testweather {
         String responseData = response.body().string();
         JSONObject json = new JSONObject(responseData);
 
-        // Parsing example: Extracting weather forecast for the specified number of days
+        // Extracting weather forecast for the specified number of days
         JSONArray forecastDay = json.getJSONObject("forecast").getJSONArray("forecastday");
         JSONObject alerts = json.optJSONObject("alerts");
         StringBuilder forecastBuilder = new StringBuilder();
@@ -40,6 +40,7 @@ public class testweather {
 
             forecastBuilder.append(String.format("Date: %s, Max Temp: %.0f°C, Avg Wind Speed: %.0f kph, Condition: %s\n", date, (maxTemp + minTemp)/2, avgWindSpeed, condition));
         }
+        // in case of a storm this is a warning system
         if (alerts != null && alerts.length() > 0) {
             forecastBuilder.append("Storm Warnings:\n");
 
