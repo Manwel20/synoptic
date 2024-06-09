@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+    <link rel="icon" href="EWB icon.jpg" type="image/x-icon">
+</head>
+<body>
+    <div class="form-container">
+        <div class="logo-container">
+            <img src="ewb-logo.png" alt="Logo" class="logo">
+        </div>
+        <h2 id="formTitle">Email Weather Update Registration</h2>
+        <div class="toggle-container">
+            <label class="toggle-label" for="toggleMode">Delete Mode</label>
+            <input type="checkbox" id="toggleMode">
+        </div>
+        <form id="contactForm" action="/submit" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Soth Narong" required>
+            <p id="nameError" class="error-message"></p>
+            
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="e.g. example@example.com" required>
+            <p id="emailError" class="error-message"></p>
+            
+            <button id="submit" type="submit">Submit</button>
+        </form>
+        <div id="confirmationMessage" class="confirmation-message" style="display: none;">Thank you! Your form has been submitted.</div>
+    </div>
+</body>
+</html>
