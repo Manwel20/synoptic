@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Validate name
         if (!(/^(?!\s*$)[a-zA-Z\s]+$/).test(name)) {
-            nameError.textContent = 'Invalid name format (letters and spaces only).';
+            nameError.textContent = 'ទម្រង់ឈ្មោះមិនត្រឹមត្រូវ (អក្សរ និងដកឃ្លាប៉ុណ្ណោះ).';
             isValid = false;
         } else {
             nameError.textContent = '';
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Validate email
         if (!(/^\S+@\S+\.\S+$/).test(email)) {
-            emailError.textContent = "Invalid email format (must have an '@' followed by a '.').";
+            emailError.textContent = "ទម្រង់អ៊ីមែលមិនត្រឹមត្រូវ (ត្រូវតែមាន '@' អមដោយ '.').";
             isValid = false;
         } else {
             emailError.textContent = '';
